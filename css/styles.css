@@ -37,7 +37,7 @@ button {
   transition: flex 0.7s ease-in;
 }
 .panel h3 {
-  font-size: 1rem;
+  font-size: 2rem;
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -52,15 +52,6 @@ button {
 .panel.active h3 {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
-  margin-left: 190px;
-}
-
-@media (max-width: 480) {
-  .expandCardContainer {
-    width: 100vw;
-  }
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
-  }
+  margin-left: 40%;
+  color: darkslategrey;
 }
