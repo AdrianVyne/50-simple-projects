@@ -1,0 +1,351 @@
+/* =========================================================
+   Home page only. Project pages still use styles.css —
+   nothing here touches them.
+   ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #07070b;
+  --ink: #f4f4fb;
+  --muted: #a7a7c2;
+  --c1: #ff2e97; /* hot pink   */
+  --c2: #7b2ff7; /* violet     */
+  --c3: #2bd2ff; /* cyan       */
+  --c4: #ff8a3d; /* orange     */
+  --tile-virtual-w: 1280px; /* the "desktop" width each preview is rendered at */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ---------- Hero with animated mesh gradient ---------- */
+.hero {
+  position: relative;
+  min-height: 64vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  text-align: center;
+  padding: 7vh 6vw;
+}
+
+.hero__mesh {
+  position: absolute;
+  inset: -30%;
+  z-index: -1;
+  background:
+    radial-gradient(40% 40% at 18% 24%, var(--c1) 0%, transparent 60%),
+    radial-gradient(38% 38% at 82% 18%, var(--c3) 0%, transparent 60%),
+    radial-gradient(45% 45% at 72% 82%, var(--c2) 0%, transparent 60%),
+    radial-gradient(35% 35% at 24% 80%, var(--c4) 0%, transparent 60%),
+    var(--bg);
+  filter: blur(40px) saturate(135%);
+  animation: drift 22s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1)    rotate(0deg); }
+  50%  { transform: translate3d(2%, -3%, 0) scale(1.12) rotate(8deg); }
+  100% { transform: translate3d(-3%, 2%, 0) scale(1.05) rotate(-6deg); }
+}
+
+/* subtle grain so the gradient looks premium, not flat */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 3px 3px;
+  pointer-events: none;
+}
+
+.hero__inner {
+  max-width: 880px;
+}
+
+.hero__eyebrow {
+  margin: 0 0 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.hero__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(2.6rem, 8vw, 6rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  text-shadow: 0 6px 40px rgba(0, 0, 0, 0.35);
+}
+
+.hero__title span {
+  display: block;
+  background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0.6));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__sub {
+  margin: 1.4rem auto 0;
+  max-width: 46ch;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  line-height: 1.6;
+}
+
+.hero__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.hero__link:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.hero__scroll {
+  margin: 3.2rem 0 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hero__scroll span {
+  width: 1px;
+  height: 38px;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), transparent);
+  animation: scrollpulse 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollpulse {
+  0%, 100% { opacity: 0.2; transform: scaleY(0.5); transform-origin: top; }
+  50%      { opacity: 1;   transform: scaleY(1);   transform-origin: top; }
+}
+
+/* ---------- The edge-to-edge project grid ---------- */
+.grid {
+  --cols: 4;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  gap: 0; /* tiles touch, exactly as asked */
+}
+
+@media (max-width: 1100px) { .grid { --cols: 3; } }
+@media (max-width: 760px)  { .grid { --cols: 2; } }
+@media (max-width: 460px)  { .grid { --cols: 1; } }
+
+/* ---------- A single tile ---------- */
+.tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #0e0e16;
+  color: var(--ink);
+  text-decoration: none;
+  transform-origin: center;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.5s ease,
+              filter 0.5s ease,
+              box-shadow 0.5s ease;
+  will-change: transform;
+}
+
+/* thin separators so touching tiles still read as a grid */
+.tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+  transition: box-shadow 0.5s ease;
+}
+
+/* the live, scaled-down project */
+.tile__frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--tile-virtual-w);
+  height: calc(var(--tile-virtual-w) * 0.75); /* 4:3 */
+  border: 0;
+  transform: scale(var(--scale, 0.25));
+  transform-origin: top left;
+  pointer-events: none; /* clicks go to the tile link, not the iframe */
+  background: #15151f;
+}
+
+/* placeholder shown until the frame loads */
+.tile__skeleton {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(110deg, #15151f 30%, #20202e 50%, #15151f 70%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+}
+
+.tile.is-loaded .tile__skeleton {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+@keyframes shimmer {
+  to { background-position: -200% 0; }
+}
+
+/* number badge */
+.tile__num {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.85rem;
+  z-index: 4;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.55);
+  mix-blend-mode: difference;
+  transition: color 0.4s ease;
+}
+
+/* name + description slide up on hover */
+.tile__meta {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 4;
+  padding: 1.4rem 1.2rem 1.1rem;
+  background: linear-gradient(transparent, rgba(4, 4, 8, 0.92) 38%);
+  transform: translateY(101%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tile__name {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.tile__desc {
+  margin: 0.3rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.tile__cta {
+  display: inline-block;
+  margin-top: 0.7rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.4s ease 0.06s, transform 0.4s ease 0.06s;
+}
+
+/* ---------- Hover choreography: spotlight one, dim the rest ---------- */
+@media (hover: hover) {
+  .grid:hover .tile {
+    opacity: 0.4;
+    filter: saturate(0.55) brightness(0.7);
+    transform: scale(0.965);
+  }
+
+  .grid .tile:hover {
+    opacity: 1;
+    filter: none;
+    transform: scale(1.07);
+    z-index: 10;
+    box-shadow:
+      0 30px 70px -20px rgba(0, 0, 0, 0.8),
+      0 0 0 1px rgba(255, 255, 255, 0.12),
+      0 0 60px -10px var(--glow, var(--c2));
+  }
+
+  .tile:hover::before {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+  }
+
+  .tile:hover .tile__meta {
+    transform: translateY(0);
+  }
+
+  .tile:hover .tile__cta {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .tile:hover .tile__num {
+    color: #fff;
+  }
+}
+
+/* touch / no-hover: keep meta visible so it's usable */
+@media (hover: none) {
+  .tile__meta { transform: translateY(0); }
+  .tile__cta { opacity: 1; transform: none; }
+}
+
+/* respect reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero__mesh,
+  .hero__scroll span,
+  .tile__skeleton { animation: none; }
+  .tile,
+  .tile__meta { transition: none; }
+}
+
+footer,
+.foot {
+  text-align: center;
+  padding: 3rem 1rem 4rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}

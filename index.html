@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
+  <!-- keep this site out of search engines -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="googlebot" content="noindex, nofollow" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>50 Projects</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/scripts.js"></script>
-  <link rel="stylesheet" href="css/styles.css" />
-  <!-- fav icon -->
+  <link rel="stylesheet" href="css/home.css" />
   <link rel="icon" type="image/x-icon" href="imgs/favicon.png" />
 </head>
 
 <body>
-  <h2>from 50 Projects In 50 Days - HTML, CSS & JavaScript</h2>
-  <a href="https://www.udemy.com/course/50-projects-50-days/">Link to the udemy course</a>
-  <ul id="projects"></ul>
+  <header class="hero">
+    <div class="hero__mesh" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow">A living wall of mini-builds</p>
+      <h1 class="hero__title">50 Projects <span>in 50 Days</span></h1>
+      <p class="hero__sub">HTML, CSS &amp; JavaScript &mdash; every tile below is the real project, running live. Hover to focus, click to open.</p>
+      <a class="hero__link" href="https://www.udemy.com/course/50-projects-50-days/" target="_blank" rel="noopener">
+        View the Udemy course
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M5 5h7v2H7v10h10v-5h2v7H5V5zm9 0h5v5h-2V8.41l-7.3 7.3-1.4-1.42L14.58 7H14V5z"/></svg>
+      </a>
+      <p class="hero__scroll" aria-hidden="true">scroll<span></span></p>
+    </div>
+  </header>
 
+  <main id="grid" class="grid" aria-label="Projects"></main>
 
+  <script src="js/home.js" defer></script>
 </body>
 
 </html>
