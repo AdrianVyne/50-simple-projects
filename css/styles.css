@@ -1,57 +1,85 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-/* "*" means that it applies to everything */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 * {
-  /* adding any padding or margin does not affect the size of an element */
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(1200px 600px at 50% -10%, #1b2440, #0a0d18 60%);
+  color: #eef1f8;
 }
-button {
-  margin: 1%;
-  border-radius: 8px;
+
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin: 0 0 16px;
+}
+
+.expandCardContainer {
+  display: flex;
+  width: 90vw;
+  max-width: 1100px;
+  gap: 12px;
 }
 
 .hideoverflow {
   overflow: hidden;
 }
 
-.expandCardContainer {
-  display: flex;
-  width: 90vw;
-}
-
 .panel {
-  background-size: auto 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
+  height: 76vh;
+  border-radius: 22px;
   color: white;
   cursor: pointer;
   flex: 0.5;
-  margin: 10px;
   position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.7);
   transition: flex 0.7s ease-in;
 }
-.panel h3 {
-  font-size: 2rem;
+
+.panel::after {
+  content: "";
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  margin: 0;
+  inset: 0;
+  background: linear-gradient(transparent 45%, rgba(5, 8, 16, 0.85));
   opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.panel h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  position: absolute;
+  bottom: 22px;
+  left: 24px;
+  margin: 0;
+  z-index: 2;
+  opacity: 0;
+  white-space: nowrap;
 }
 
 .panel.active {
   flex: 5;
 }
 
+.panel.active::after {
+  opacity: 1;
+}
+
 .panel.active h3 {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
-  margin-left: 40%;
-  color: darkslategrey;
 }

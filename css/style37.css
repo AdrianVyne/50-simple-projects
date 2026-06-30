@@ -5,18 +5,20 @@
 }
 
 body {
-  background: #efefbb;
-  background: linear-gradient(to right, #d4d3dd, #efefbb);
+  background: #8ec5fc;
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
   font-family: 'Lato', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0;
+  min-height: 100vh;
 }
 
 h1 {
   letter-spacing: 3px;
+  color: #3a2a5d;
 }
 
 .poke-container {
@@ -29,12 +31,17 @@ h1 {
 }
 
 .pokemon {
-  background-color: #eee;
-  border-radius: 10px;
-  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  background-color: #f7f7fb;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(100, 100, 100, 0.4);
   margin: 10px;
   padding: 20px;
   text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.pokemon:hover {
+  transform: translateY(-5px);
 }
 
 .pokemon .img-container {

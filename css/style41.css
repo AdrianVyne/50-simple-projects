@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #fbfcfe;
+  background-color: #eef1f8;
   font-family: 'Muli', sans-serif;
   display: flex;
   align-items: center;
@@ -17,11 +17,12 @@ body {
 
 .container {
   background-color: #fff;
-  border: 3px #000 solid;
-  border-radius: 10px;
+  border: 3px #5b6cff solid;
+  border-radius: 14px;
   padding: 30px;
   max-width: 1000px;
   text-align: center;
+  box-shadow: 0 20px 50px -25px rgba(91, 108, 255, 0.5);
 }
 
 .code-container {
@@ -33,11 +34,11 @@ body {
 
 .code {
   caret-color: transparent;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 75px;
   height: 120px;
   width: 100px;
-  border: 1px solid #eee;
+  border: 1px solid #e2e6f5;
   margin: 1%;
   text-align: center;
   font-weight: 300;
@@ -51,18 +52,18 @@ body {
 }
 
 .code:valid {
-  border-color: #3498db;
-  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
+  border-color: #5b6cff;
+  box-shadow: 0 10px 10px -5px rgba(91, 108, 255, 0.35);
 }
 
 .info {
-  background-color: #eaeaea;
+  background-color: #eef0f6;
   display: inline-block;
   padding: 10px;
   line-height: 20px;
   max-width: 400px;
   color: #777;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 @media (max-width: 600px) {

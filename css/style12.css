@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #2b88f0;
+  background-color: #3a0ca3;
   font-family: 'Muli', sans-serif;
   display: flex;
   flex-direction: column;
@@ -32,9 +32,10 @@ textarea {
   width: 100%;
   height: 100px;
   font-family: inherit;
-  padding: 10px;
+  padding: 12px;
   margin: 0 0 20px;
   font-size: 16px;
+  border-radius: 10px;
 }
 
 textarea:focus {
@@ -42,7 +43,7 @@ textarea:focus {
 }
 
 .tag {
-  background-color: #f0932b;
+  background-color: #f72585;
   color: #fff;
   border-radius: 50px;
   padding: 10px 20px;
@@ -52,5 +53,6 @@ textarea:focus {
 }
 
 .tag.highlight {
-  background-color: #273c75;
+  background-color: #4cc9f0;
+  color: #04222b;
 }

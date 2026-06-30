@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(161, 100, 223);
+  background: radial-gradient(1000px 600px at 50% 0%, #2a1840, #0c0a14 60%);
   font-family: 'Poppins', sans-serif;
   display: flex;
   flex-wrap: wrap;
@@ -18,19 +18,30 @@ body {
 }
 
 .btn {
-  background-color: rebeccapurple;
-  border-radius: 5px;
+  background-color: #ff4d6d;
+  border-radius: 12px;
   border: none;
   color: #fff;
-  margin: 1rem;
-  padding: 1.5rem 3rem;
+  margin: 0.75rem;
+  padding: 1.4rem 2.8rem;
   font-size: 1.2rem;
+  font-weight: 600;
   font-family: inherit;
   cursor: pointer;
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.7);
+  transition: transform 0.15s ease, filter 0.2s ease;
 }
 
+.btn:nth-child(6n + 1) { background-color: #ff4d6d; }
+.btn:nth-child(6n + 2) { background-color: #ffb703; color: #3a2a00; }
+.btn:nth-child(6n + 3) { background-color: #2bd2ff; color: #04222b; }
+.btn:nth-child(6n + 4) { background-color: #b388ff; }
+.btn:nth-child(6n + 5) { background-color: #4ade80; color: #04280f; }
+.btn:nth-child(6n + 6) { background-color: #ff7b54; }
+
 .btn:hover {
-  opacity: 0.9;
+  transform: translateY(-3px);
+  filter: brightness(1.05);
 }
 
 .btn:focus {

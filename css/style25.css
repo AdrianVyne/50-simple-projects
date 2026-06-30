@@ -19,7 +19,7 @@ body {
 
 .nav {
   position: fixed;
-  background-color: #222;
+  background-color: #16181d;
   top: 0;
   left: 0;
   right: 0;
@@ -63,12 +63,12 @@ body {
 
 .nav a.current,
 .nav a:hover {
-  color: #c0392b;
+  color: #16c79a;
   font-weight: bold;
 }
 
 .hero {
-  background-image: url('https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('https://picsum.photos/seed/stickynav-hero/1600/900');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
@@ -90,7 +90,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.55);
   z-index: -1;
 }
 

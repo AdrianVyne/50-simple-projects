@@ -18,9 +18,9 @@ body {
 }
 
 .testimonial-container {
-  background-color: #476ce4;
+  background: linear-gradient(135deg, #7b2ff7, #ff2e97);
   color: #fff;
-  border-radius: 15px;
+  border-radius: 18px;
   margin: 20px auto;
   padding: 50px 80px;
   max-width: 768px;
@@ -58,6 +58,7 @@ body {
   height: 75px;
   width: 75px;
   object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.6);
 }
 
 .user .user-details {

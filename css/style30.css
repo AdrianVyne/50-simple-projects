@@ -5,7 +5,8 @@
 }
 
 body {
-  background-color: darksalmon;
+  background: linear-gradient(135deg, #ee9ca7, #ffdde1);
+  color: #3a2a2f;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
@@ -22,15 +23,18 @@ div {
   background: rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
   font-size: 18px;
+  border-radius: 8px;
 }
 
 input {
   width: 50px;
   padding: 5px;
   font-size: 18px;
-  background-color: darksalmon;
+  background-color: transparent;
   border: none;
+  border-bottom: 2px solid rgba(58, 42, 47, 0.4);
   text-align: center;
+  color: #3a2a2f;
 }
 
 input:focus {

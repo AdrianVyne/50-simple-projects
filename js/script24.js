@@ -12,14 +12,14 @@ setTimeout(getData, 2500)
 
 function getData() {
   header.innerHTML =
-    '<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="" />'
-  title.innerHTML = 'Lorem ipsum dolor sit amet'
+    '<img src="https://picsum.photos/seed/placeholder-hero/800/500" alt="" />'
+  title.innerHTML = 'A fresh take on loading states'
   excerpt.innerHTML =
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore perferendis'
+    'Skeleton screens keep the layout steady while the real content streams in.'
   profile_img.innerHTML =
-    '<img src="https://randomuser.me/api/portraits/men/45.jpg" alt="" />'
-  name.innerHTML = 'John Doe'
-  date.innerHTML = 'Oct 08, 2020'
+    '<img src="https://randomuser.me/api/portraits/women/68.jpg" alt="" />'
+  name.innerHTML = 'Avery Stone'
+  date.innerHTML = 'Jun 30, 2026'
 
   animated_bgs.forEach((bg) => bg.classList.remove('animated-bg'))
   animated_bg_texts.forEach((bg) => bg.classList.remove('animated-bg-text'))

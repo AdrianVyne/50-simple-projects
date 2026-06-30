@@ -43,13 +43,13 @@ input[type='range'] + label {
   width: 80px;
   padding: 5px 0;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 6px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Chrome & Safari */
 input[type='range']::-webkit-slider-runnable-track {
-  background: purple;
+  background: #00b4d8;
   border-radius: 4px;
   width: 100%;
   height: 10px;
@@ -62,14 +62,14 @@ input[type='range']::-webkit-slider-thumb {
   width: 24px;
   background: #fff;
   border-radius: 50%;
-  border: 1px solid purple;
+  border: 2px solid #00b4d8;
   margin-top: -7px;
   cursor: pointer;
 }
 
 /* Firefox */
 input[type='range']::-moz-range-track {
-  background: purple;
+  background: #00b4d8;
   border-radius: 4px;
   width: 100%;
   height: 13px;
@@ -82,14 +82,14 @@ input[type='range']::-moz-range-thumb {
   width: 24px;
   background: #fff;
   border-radius: 50%;
-  border: 1px solid purple;
+  border: 2px solid #00b4d8;
   margin-top: -7px;
   cursor: pointer;
 }
 
 /* IE */
 input[type='range']::-ms-track {
-  background: purple;
+  background: #00b4d8;
   border-radius: 4px;
   width: 100%;
   height: 13px;
@@ -102,7 +102,7 @@ input[type='range']::-ms-thumb {
   width: 24px;
   background: #fff;
   border-radius: 50%;
-  border: 1px solid purple;
+  border: 2px solid #00b4d8;
   margin-top: -7px;
   cursor: pointer;
 }

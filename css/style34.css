@@ -5,6 +5,8 @@
 }
 
 body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   height: 100vh;
@@ -68,7 +70,7 @@ h4 {
 }
 
 .nums {
-  color: #3498db;
+  color: #ffd166;
   font-size: 50px;
   position: relative;
   overflow: hidden;
@@ -125,26 +127,26 @@ h4 {
   }
 }
 
-#replay{
-  background-color: #3498db;
-  border-radius: 3px;
+#replay {
+  background-color: #ef476f;
+  border-radius: 6px;
   border: none;
-  color: aliceblue;
-  padding: 5px;
+  color: #fff;
+  padding: 8px 14px;
   text-align: center;
   display: inline-block;
   cursor: pointer;
   transition: all 0.3s;
 }
 
-#replay span{
+#replay span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.3s;
 }
 
-#replay span:after{
+#replay span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -153,11 +155,11 @@ h4 {
   transition: 0.5s;
 }
 
-#replay:hover span{
+#replay:hover span {
   padding-right: 25px;
 }
 
-#replay:hover span:after{
+#replay:hover span:after {
   opacity: 1;
   right: 0;
 }

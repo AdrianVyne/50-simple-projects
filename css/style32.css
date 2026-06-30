@@ -5,6 +5,8 @@
 }
 
 body {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: #fff;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
@@ -28,7 +30,7 @@ body {
 
 .label {
   position: relative;
-  background-color: #d0d0d0;
+  background-color: #3a4760;
   border-radius: 50px;
   cursor: pointer;
   display: inline-block;
@@ -38,7 +40,7 @@ body {
 }
 
 .toggle:checked + .label {
-  background-color: #8e44ad;
+  background-color: #00e0b8;
 }
 
 .ball {

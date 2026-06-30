@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #0f1226;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
@@ -16,15 +16,18 @@ body {
 }
 
 canvas {
-  border: 2px solid steelblue;
+  border: 2px solid #ff2e97;
+  border-radius: 4px;
+  background: #fff;
 }
 
 .toolbox {
-  background-color: steelblue;
-  border: 1px solid slateblue;
+  background-color: #1b2440;
+  border: 1px solid #2b3a67;
   display: flex;
   width: 804px;
   padding: 1rem;
+  border-radius: 0 0 8px 8px;
 }
 
 .toolbox > * {
@@ -39,6 +42,7 @@ canvas {
   margin: 0.25rem;
   padding: 0.25rem;
   cursor: pointer;
+  border-radius: 6px;
 }
 
 .toolbox > *:last-child {

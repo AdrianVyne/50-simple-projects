@@ -18,7 +18,11 @@ body {
 }
 
 .logo {
-  width: 200px;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #7b2ff7;
+  margin: 0;
 }
 
 .nav-btn {
@@ -30,8 +34,8 @@ body {
 
 .open-btn {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 12px;
+  right: 14px;
 }
 
 .nav {
@@ -48,7 +52,7 @@ body {
 }
 
 .nav-black {
-  background-color: rgb(34, 31, 31);
+  background-color: rgb(20, 18, 28);
   width: 60%;
   max-width: 480px;
   min-width: 320px;
@@ -60,7 +64,7 @@ body {
 }
 
 .nav-red {
-  background-color: rgb(229, 9, 20);
+  background-color: rgb(123, 47, 247);
   width: 95%;
   transition-delay: 0.2s;
 }
@@ -98,7 +102,7 @@ body {
 }
 
 .list li a {
-  color: rgb(34, 31, 31);
+  color: rgb(20, 18, 28);
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;

@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: steelblue;
+  background-image: linear-gradient(135deg, #5f2c82, #49a09d);
   color: #fff;
   font-family: 'Muli', sans-serif;
   display: flex;
@@ -18,9 +18,10 @@ body {
 }
 
 .container {
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 20px 40px;
-  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 24px 44px;
+  border-radius: 14px;
+  backdrop-filter: blur(4px);
 }
 
 .container h1 {
@@ -30,19 +31,21 @@ body {
 
 .container a {
   text-decoration: none;
-  color: lightblue;
+  color: #7afcff;
 }
 
 .btn {
   cursor: pointer;
   display: inline-block;
   width: 100%;
-  background: lightblue;
+  background: #7afcff;
+  color: #05323a;
   padding: 15px;
   font-family: inherit;
   font-size: 16px;
+  font-weight: 700;
   border: 0;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .btn:focus {
@@ -77,7 +80,7 @@ body {
 .form-control input:focus,
 .form-control input:valid {
   outline: 0;
-  border-bottom-color: lightblue;
+  border-bottom-color: #7afcff;
 }
 
 .form-control label {
@@ -96,6 +99,6 @@ body {
 
 .form-control input:focus + label span,
 .form-control input:valid + label span {
-  color: lightblue;
+  color: #7afcff;
   transform: translateY(-30px);
 }

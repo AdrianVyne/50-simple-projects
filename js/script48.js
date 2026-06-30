@@ -1,17 +1,15 @@
 const container = document.querySelector('.container')
-const unsplashURL = 'https://source.unsplash.com/random/'
 const rows = 5
 
-for(let i = 0; i < rows * 3; i++) {
-    const img = document.createElement('img')
-    img.src = `${unsplashURL}${getRandomSize()}`
-    container.appendChild(img)
-}
-
-function getRandomSize() {
-    return `${getRandomNr()}x${getRandomNr()}`
+for (let i = 0; i < rows * 3; i++) {
+  const img = document.createElement('img')
+  const size = getRandomNr()
+  img.src = `https://picsum.photos/seed/feed-${i}-${Math.floor(
+    Math.random() * 100000
+  )}/${size}/${size}`
+  container.appendChild(img)
 }
 
 function getRandomNr() {
-    return Math.floor(Math.random() * 10) + 300
+  return Math.floor(Math.random() * 10) + 300
 }

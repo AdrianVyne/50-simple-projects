@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: steelblue;
+  background-color: #1f2a44;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,24 +16,27 @@ body {
   height: 150px;
   width: 150px;
   margin: 10px;
-  border: solid 3px black;
-  background: white;
+  border: solid 3px #4a5a85;
+  background: #0e1322;
+  border-radius: 8px;
 }
 
 .fill {
-  background-image: url('https://source.unsplash.com/random/150x150');
+  background-image: url('https://picsum.photos/seed/dragdrop/150/150');
+  background-size: cover;
   height: 145px;
   width: 145px;
   cursor: pointer;
+  border-radius: 6px;
 }
 
 .hold {
-  border: solid 5px #ccc;
+  border: solid 5px #2dd4bf;
 }
 
 .hovered {
-  background-color: #333;
-  border-color: white;
+  background-color: #11151c;
+  border-color: #2dd4bf;
   border-style: dashed;
 }
 

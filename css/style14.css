@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #8e44ad;
+  background-image: linear-gradient(135deg, #16222a, #3a6073);
   color: #fff;
   font-family: 'Roboto Mono', sans-serif;
   display: flex;
@@ -27,6 +27,7 @@ body {
 .counter {
   font-size: 60px;
   margin-top: 10px;
+  color: #64ffda;
 }
 
 @media (max-width: 580px) {

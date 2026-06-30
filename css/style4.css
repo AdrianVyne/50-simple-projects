@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+  background-image: linear-gradient(135deg, #11998e, #38ef7d);
   font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
@@ -24,9 +24,11 @@ body {
   background-color: #fff;
   border: 0;
   font-size: 18px;
-  padding: 15px;
+  padding: 15px 22px;
   height: 50px;
   width: 50px;
+  border-radius: 999px;
+  box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.45);
   transition: width 0.3s ease;
 }
 
@@ -35,11 +37,13 @@ body {
   border: 0;
   cursor: pointer;
   font-size: 24px;
+  color: #11998e;
   position: absolute;
   top: 0;
   left: 0;
   height: 50px;
   width: 50px;
+  border-radius: 50%;
   transition: transform 0.3s ease;
 }
 
@@ -49,9 +53,9 @@ body {
 }
 
 .search.active .input {
-  width: 200px;
+  width: 240px;
 }
 
 .search.active .btn {
-  transform: translateX(198px);
+  transform: translateX(238px);
 }

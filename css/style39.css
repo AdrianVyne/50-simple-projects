@@ -13,7 +13,7 @@ body {
 }
 
 .background {
-  background: url('https://images.unsplash.com/photo-1556745757-8d76bdb6984b')
+  background: url('https://picsum.photos/seed/pwstrength/1920/1280')
     no-repeat center center/cover;
   position: absolute;
   top: -20px;

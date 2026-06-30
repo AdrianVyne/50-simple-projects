@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background: #0f1226;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,10 +21,11 @@ img {
 }
 
 .carousel {
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
   height: 530px;
   width: 500px;
   overflow: hidden;
+  border-radius: 12px;
 }
 
 .image-container {
@@ -38,12 +40,13 @@ img {
 }
 
 .btn {
-  background-color: rebeccapurple;
+  background-color: #6c5ce7;
   color: #fff;
   border: none;
-  padding: 0.5rem;
+  padding: 0.6rem;
   cursor: pointer;
   width: 49.5%;
+  font-weight: 600;
 }
 
 .btn:hover {

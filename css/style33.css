@@ -6,24 +6,26 @@
 }
 
 body {
-  background-color: #7bdaf3;
+  background-image: linear-gradient(135deg, #cfd9df, #e2ebf0);
   font-family: 'Poppins', sans-serif;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding-top: 3rem;
+  min-height: 100vh;
 }
 
 .add {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  background-color: #9ec862;
+  background-color: #ef476f;
   color: #fff;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  box-shadow: 0 8px 18px -8px rgba(239, 71, 111, 0.6);
 }
 
 .add:active {
@@ -32,15 +34,16 @@ body {
 
 .note {
   background-color: #fff;
-  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   margin: 30px 20px;
   height: 400px;
   width: 400px;
   overflow-y: scroll;
+  border-radius: 10px;
 }
 
 .note .tools {
-  background-color: #9ec862;
+  background-color: #ef476f;
   display: flex;
   justify-content: flex-end;
   padding: 0.5rem;
