@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PULSE — one app for everything</title>
+  <link rel="stylesheet" href="pulse.css" />
+  <link rel="icon" type="image/x-icon" href="../imgs/favicon.png" />
+</head>
+
+<body>
+  <!-- Kinetic loader (Project 23) -->
+  <div class="p-loader"><div class="p-loader__spin"></div></div>
+
+  <!-- Sticky nav (25) with hidden search (4) + animated mobile menu (13) -->
+  <nav class="p-nav" data-project="25" data-name="Sticky Navigation">
+    <div class="p-container">
+      <div class="p-nav__inner">
+        <a class="p-logo" href="index.html"><b>◑</b> PULSE</a>
+        <div class="p-nav__links">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#team">Team</a>
+        </div>
+        <div class="p-nav__tools">
+          <div class="p-search" data-project="4" data-name="Hidden Search">
+            <button class="p-iconbtn" data-search-toggle aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+            </button>
+            <input type="text" placeholder="Search PULSE…" />
+          </div>
+          <button class="p-iconbtn" data-theme-toggle aria-label="Toggle theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+          </button>
+          <a class="p-btn" href="signup.html">Get started</a>
+          <button class="p-iconbtn p-burger" data-project="13" data-name="Animated Navigation" aria-label="Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="p-mobile-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#team">Team</a>
+        <a href="signup.html">Get started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero: background slider (18) + typing headline (30) + ripple CTA (20) -->
+  <header class="p-hero">
+    <div class="p-hero__bg" data-project="18" data-name="Background Slider">
+      <div class="p-hero__slide is-active" style="background-image:url('https://picsum.photos/seed/pulse-h1/1600/1000')"></div>
+      <div class="p-hero__slide" style="background-image:url('https://picsum.photos/seed/pulse-h2/1600/1000')"></div>
+      <div class="p-hero__slide" style="background-image:url('https://picsum.photos/seed/pulse-h3/1600/1000')"></div>
+    </div>
+    <div class="p-container p-hero__inner">
+      <p class="p-eyebrow" style="color:#fff">Your day, in one place</p>
+      <h1 class="p-hero__title">
+        PULSE helps you <span class="p-type" data-project="30" data-name="Auto Text Effect"></span>
+      </h1>
+      <p class="p-hero__sub">Tasks, notes, habits, and your team — one calm home base instead of ten noisy tabs.</p>
+      <div class="p-hero__cta">
+        <a class="p-btn" href="signup.html" data-project="20" data-name="Button Ripple">Start free &rarr;</a>
+        <a class="p-btn p-btn--ghost" href="#features" style="color:#fff;border-color:rgba(255,255,255,.4)">See features</a>
+      </div>
+    </div>
+    <!-- Split landing band (16) -->
+    <div class="p-split" data-project="16" data-name="Split Landing Page">
+      <div class="p-split__half p-split__left">
+        <h3>For teams</h3>
+        <a href="signup.html" class="p-split__btn">Work together</a>
+      </div>
+      <div class="p-split__half p-split__right">
+        <h3>For solo</h3>
+        <a href="signup.html" class="p-split__btn">Fly alone</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Stats band (14) -->
+  <section class="p-stats" data-project="14" data-name="Increment Counter">
+    <div class="p-container p-stats__grid">
+      <div><span class="p-counter" data-target="12480">0</span><small>tasks done today</small></div>
+      <div><span class="p-counter" data-target="9300">0</span><small>teams onboard</small></div>
+      <div><span class="p-counter" data-target="48">0</span><small>integrations</small></div>
+      <div><span class="p-counter" data-target="99">0</span><small>% uptime</small></div>
+    </div>
+  </section>
+
+  <!-- Features = expanding cards (1) with blurry-loading image (5) -->
+  <section class="p-section" id="features">
+    <div class="p-container">
+      <p class="p-eyebrow">Features</p>
+      <h2 class="p-h2">Everything, finally in one place</h2>
+      <div class="p-cards" data-project="1" data-name="Expanding Cards">
+        <div class="p-cards__panel is-active" style="background-image:url('https://picsum.photos/seed/pulse-f1/900/1200')"><h3>Tasks</h3></div>
+        <div class="p-cards__panel" style="background-image:url('https://picsum.photos/seed/pulse-f2/900/1200')"><h3>Notes</h3></div>
+        <div class="p-cards__panel" style="background-image:url('https://picsum.photos/seed/pulse-f3/900/1200')"><h3>Habits</h3></div>
+        <div class="p-cards__panel" style="background-image:url('https://picsum.photos/seed/pulse-f4/900/1200')"><h3>Team</h3></div>
+        <div class="p-cards__panel" style="background-image:url('https://picsum.photos/seed/pulse-f5/900/1200')"><h3>Focus</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works = scroll animation (6) -->
+  <section class="p-section p-how" id="how">
+    <div class="p-container">
+      <p class="p-eyebrow">How it works</p>
+      <h2 class="p-h2">Three steps to a calmer day</h2>
+      <div class="p-how__grid" data-project="6" data-name="Scroll Animation">
+        <div class="p-how__step p-reveal"><span>01</span><h3>Capture</h3><p>Drop every task, note, and idea into one inbox.</p></div>
+        <div class="p-how__step p-reveal"><span>02</span><h3>Organize</h3><p>PULSE sorts it into projects, habits, and your day.</p></div>
+        <div class="p-how__step p-reveal"><span>03</span><h3>Flow</h3><p>Focus on one thing at a time — the rest waits quietly.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshot carousel (35) -->
+  <section class="p-section">
+    <div class="p-container">
+      <p class="p-eyebrow">A look inside</p>
+      <h2 class="p-h2">Designed to get out of your way</h2>
+      <div class="p-carousel" data-project="35" data-name="Image Carousel">
+        <div class="p-carousel__track">
+          <img class="p-blur" data-src="https://picsum.photos/seed/pulse-s1/1000/600" alt="">
+          <img class="p-blur" data-src="https://picsum.photos/seed/pulse-s2/1000/600" alt="">
+          <img class="p-blur" data-src="https://picsum.photos/seed/pulse-s3/1000/600" alt="">
+        </div>
+        <button class="p-carousel__btn p-carousel__prev" aria-label="Previous">&#8249;</button>
+        <button class="p-carousel__btn p-carousel__next" aria-label="Next">&#8250;</button>
+      </div>
+      <p class="p-blur-note"><span class="p-blur p-blur--mini" data-project="5" data-name="Blurry Loading" data-src="https://picsum.photos/seed/pulse-blur/120/80"></span> images sharpen as they load</p>
+    </div>
+  </section>
+
+  <!-- Vertical story slider (26) -->
+  <section class="p-vslider" data-project="26" data-name="Vertical Slider">
+    <div class="p-vslider__left">
+      <div class="p-vslider__panel" style="background:#7b2ff7"><h2>Plan</h2><p>your week in minutes</p></div>
+      <div class="p-vslider__panel" style="background:#ff2e97"><h2>Track</h2><p>habits that actually stick</p></div>
+      <div class="p-vslider__panel" style="background:#2bd2ff"><h2>Ship</h2><p>with your team in sync</p></div>
+    </div>
+    <div class="p-vslider__right">
+      <div class="p-vslider__img" style="background-image:url('https://picsum.photos/seed/pulse-v1/1200/1600')"></div>
+      <div class="p-vslider__img" style="background-image:url('https://picsum.photos/seed/pulse-v2/1200/1600')"></div>
+      <div class="p-vslider__img" style="background-image:url('https://picsum.photos/seed/pulse-v3/1200/1600')"></div>
+    </div>
+    <div class="p-vslider__btns">
+      <button class="p-vslider__up" aria-label="Up">&#8963;</button>
+      <button class="p-vslider__down" aria-label="Down">&#8964;</button>
+    </div>
+  </section>
+
+  <!-- 3D boxes divider (40) -->
+  <section class="p-boxeswrap">
+    <button class="p-btn p-boxes-toggle" data-project="40" data-name="3D Boxes Background">Assemble ⟳</button>
+    <div class="p-boxes" id="p-boxes"></div>
+  </section>
+
+  <!-- Testimonials (47) with double-click heart (29) -->
+  <section class="p-section" id="love">
+    <div class="p-container">
+      <p class="p-eyebrow">Loved by focused people</p>
+      <div class="p-testi p-card" data-project="47" data-name="Testimonial Box">
+        <p class="p-testi__quote">“I closed nine other tabs the day I switched to PULSE. Double-tap the photo — go on.”</p>
+        <div class="p-testi__user">
+          <div class="p-testi__img" data-project="29" data-name="Double Click Heart" style="background-image:url('https://randomuser.me/api/portraits/women/68.jpg')"></div>
+          <div>
+            <h4 class="p-testi__name">Avery Stone</h4>
+            <small class="p-testi__role">Product designer</small>
+          </div>
+        </div>
+        <div class="p-testi__bar"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing: range slider (44) + good/cheap/fast (32) -->
+  <section class="p-section" id="pricing">
+    <div class="p-container">
+      <p class="p-eyebrow">Pricing</p>
+      <h2 class="p-h2">Pay for your team, not per seat panic</h2>
+      <div class="p-pricegrid">
+        <div class="p-card p-price">
+          <div class="p-range" data-project="44" data-name="Custom Range Slider">
+            <label>Team size: <strong id="p-seats">5</strong> people</label>
+            <input type="range" min="1" max="50" value="5" id="p-seatrange">
+          </div>
+          <div class="p-price__amount">$<span id="p-priceval">45</span><small>/mo</small></div>
+          <a class="p-btn" href="signup.html">Start free trial</a>
+        </div>
+        <div class="p-card p-gcf" data-project="32" data-name="Good, Cheap, Fast">
+          <p>Pick two — we'll be honest about the third:</p>
+          <div class="p-gcf__opts">
+            <label><input type="checkbox" value="good"> Good</label>
+            <label><input type="checkbox" value="cheap"> Cheap</label>
+            <label><input type="checkbox" value="fast"> Fast</label>
+          </div>
+          <p class="p-gcf__msg">Choose two options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plan quiz (46) -->
+  <section class="p-section p-quizwrap">
+    <div class="p-container">
+      <p class="p-eyebrow">Not sure?</p>
+      <h2 class="p-h2">Find your plan in 3 taps</h2>
+      <div class="p-card p-quiz" data-project="46" data-name="Quiz App"></div>
+    </div>
+  </section>
+
+  <!-- Countdown sale banner (34) -->
+  <section class="p-countdown" data-project="34" data-name="Animated Countdown">
+    <div class="p-container">
+      <h2>Launch week — 30% off ends in</h2>
+      <div class="p-countdown__nums">
+        <div><span id="cd-d">00</span><small>days</small></div>
+        <div><span id="cd-h">00</span><small>hrs</small></div>
+        <div><span id="cd-m">00</span><small>min</small></div>
+        <div><span id="cd-s">00</span><small>sec</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (11) -->
+  <section class="p-section" id="faq">
+    <div class="p-container p-faqwrap">
+      <p class="p-eyebrow">FAQ</p>
+      <h2 class="p-h2">Questions, answered</h2>
+      <div class="p-faqs" data-project="11" data-name="FAQ"></div>
+    </div>
+  </section>
+
+  <!-- Team via GitHub (28) -->
+  <section class="p-section" id="team">
+    <div class="p-container">
+      <p class="p-eyebrow">Meet the team</p>
+      <h2 class="p-h2">Built by a small, caffeinated crew</h2>
+      <div class="p-team" data-project="28" data-name="Github Profiles"></div>
+    </div>
+  </section>
+
+  <!-- Newsletter form wave (7) + toast (27) -->
+  <section class="p-section p-news">
+    <div class="p-container">
+      <div class="p-card p-news__card">
+        <h2 class="p-h2">Get the monthly PULSE</h2>
+        <form class="p-news__form" id="p-news-form" novalidate>
+          <div class="p-formwave" data-project="7" data-name="Form Input Wave">
+            <div class="p-field">
+              <input type="text" required />
+              <label>Your name</label>
+            </div>
+            <div class="p-field">
+              <input type="email" required />
+              <label>Email</label>
+            </div>
+          </div>
+          <button class="p-btn" type="submit" data-project="27" data-name="Toast Notification">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer + feedback (43) -->
+  <footer class="p-footer">
+    <div class="p-container p-footer__grid">
+      <div>
+        <a class="p-logo" href="index.html"><b>◑</b> PULSE</a>
+        <p>The 51st project — every feature here is rebuilt from one of the
+          <a href="../index.html">50 projects</a>. Hover anything to see which.
+          <span class="p-credit" data-project="23" data-name="Kinetic Loader">· page loader</span>
+          · <a href="404.html">lost?</a>
+        </p>
+      </div>
+      <div class="p-feedback" data-project="43" data-name="Feedback UI Design">
+        <p>How was this page?</p>
+        <div class="p-feedback__opts">
+          <button data-v="bad">😕</button>
+          <button data-v="ok">😐</button>
+          <button data-v="great">😍</button>
+        </div>
+        <button class="p-btn" id="p-feedback-send">Send</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="pulse.js"></script>
+  <script src="pulse-landing.js"></script>
+</body>
+
+</html>

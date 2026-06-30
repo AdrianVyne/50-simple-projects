@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PULSE — create your account</title>
+  <link rel="stylesheet" href="pulse.css" />
+  <link rel="icon" type="image/x-icon" href="../imgs/favicon.png" />
+</head>
+
+<body class="p-signup-body">
+  <div class="p-loader"><div class="p-loader__spin"></div></div>
+
+  <!-- password-strength reactive background (39) -->
+  <div class="p-strengthbg" data-project="39" data-name="Password Strength Background"
+       style="background-image:url('https://picsum.photos/seed/pulse-signup/1600/1000')"></div>
+
+  <header class="p-signup-top">
+    <a class="p-logo" href="index.html"><b>◑</b> PULSE</a>
+    <button class="p-iconbtn" data-theme-toggle aria-label="Toggle theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+    </button>
+  </header>
+
+  <main class="p-signup">
+    <div class="p-card p-signup__card">
+      <!-- progress steps (2) -->
+      <div class="p-steps" data-project="2" data-name="Progress Steps">
+        <div class="p-steps__line"><div class="p-steps__fill" id="p-steps-fill"></div></div>
+        <div class="p-step active">1</div>
+        <div class="p-step">2</div>
+        <div class="p-step">3</div>
+      </div>
+
+      <!-- Step 1: account -->
+      <section class="p-pane active" data-pane="0">
+        <h2>Create your account</h2>
+        <div class="p-formwave">
+          <div class="p-field"><input type="text" required /><label>Full name</label></div>
+          <div class="p-field"><input type="email" required /><label>Work email</label></div>
+        </div>
+        <button class="p-btn p-next" type="button">Continue</button>
+      </section>
+
+      <!-- Step 2: password -->
+      <section class="p-pane" data-pane="1">
+        <h2>Pick a strong password</h2>
+        <div class="p-pwd" data-project="31" data-name="Password Generator">
+          <div class="p-field p-field--filled">
+            <input type="text" id="p-pwd" placeholder=" " />
+            <label>Password</label>
+          </div>
+          <div class="p-pwd__meter"><span id="p-pwd-bar"></span></div>
+          <div class="p-pwd__row">
+            <small id="p-pwd-label">Type or generate a password</small>
+            <button type="button" class="p-btn p-btn--ghost p-gen">Generate ⚡</button>
+          </div>
+        </div>
+        <div class="p-pane__nav">
+          <button class="p-btn p-btn--ghost p-prev" type="button">Back</button>
+          <button class="p-btn p-next" type="button">Continue</button>
+        </div>
+      </section>
+
+      <!-- Step 3: verify (41) -->
+      <section class="p-pane" data-pane="2">
+        <h2>Verify it's you</h2>
+        <p class="p-muted">We sent a 4-digit code to your email. (Hint: any digits work here.)</p>
+        <div class="p-otp" data-project="41" data-name="Verify Account">
+          <input maxlength="1" inputmode="numeric" />
+          <input maxlength="1" inputmode="numeric" />
+          <input maxlength="1" inputmode="numeric" />
+          <input maxlength="1" inputmode="numeric" />
+        </div>
+        <div class="p-pane__nav">
+          <button class="p-btn p-btn--ghost p-prev" type="button">Back</button>
+          <button class="p-btn p-finish" type="button">Create account</button>
+        </div>
+      </section>
+    </div>
+    <p class="p-signup__foot">Already have one? <a href="app.html">Open the app</a> · <a href="index.html">Back to site</a></p>
+  </main>
+
+  <script src="pulse.js"></script>
+  <script src="pulse-signup.js"></script>
+</body>
+
+</html>

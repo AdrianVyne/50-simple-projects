@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PULSE — your dashboard</title>
+  <link rel="stylesheet" href="pulse.css" />
+  <link rel="icon" type="image/x-icon" href="../imgs/favicon.png" />
+</head>
+
+<body class="p-app-body">
+  <div class="p-loader"><div class="p-loader__spin"></div></div>
+
+  <!-- rotating side nav (3), revealed when the app rotates -->
+  <nav class="p-rotnav">
+    <a href="#w-tasks">◔ Tasks</a>
+    <a href="#w-notes">✎ Notes</a>
+    <a href="#w-discover">▦ Discover</a>
+    <a href="#w-tools">⚙ Tools</a>
+    <a href="index.html">← Marketing site</a>
+  </nav>
+
+  <!-- Netflix-style slide-out panel (45) -->
+  <aside class="p-netflix" id="p-netflix">
+    <div class="p-netflix__inner">
+      <button class="p-netflix__close" aria-label="Close">✕</button>
+      <h3>PULSE</h3>
+      <ul>
+        <li><a href="#w-tasks">My tasks</a></li>
+        <li><a href="#w-discover">Discover</a></li>
+        <li><a href="#w-integrations">Integrations</a></li>
+        <li><a href="#w-tools">Tools</a></li>
+        <li><a href="index.html">Sign out</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <div class="p-app">
+    <!-- top bar -->
+    <header class="p-appbar">
+      <button class="p-iconbtn" id="p-rotate" data-project="3" data-name="Rotating Navigation" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <a class="p-logo" href="index.html"><b>◑</b> PULSE</a>
+      <div class="p-appbar__spacer"></div>
+      <button class="p-iconbtn" id="p-shortcuts-btn" data-project="10" data-name="Event KeyCodes" aria-label="Shortcuts">⌘</button>
+      <button class="p-iconbtn" data-theme-toggle aria-label="Theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      </button>
+      <button class="p-iconbtn p-netflix-open" data-project="45" data-name="Netflix Mobile Navigation" aria-label="Open menu">☰</button>
+    </header>
+
+    <main class="p-dash">
+      <div class="p-dash__head">
+        <h1>Good to see you 👋</h1>
+        <p class="p-muted">Here's your day at a glance.</p>
+      </div>
+
+      <div class="p-grid">
+        <!-- Todo (49) -->
+        <section class="p-card p-widget" id="w-tasks" data-project="49" data-name="Todo List">
+          <h3>My Tasks</h3>
+          <input class="p-todo-input" placeholder="Add a task, press Enter…" />
+          <ul class="p-todo-list"></ul>
+          <small class="p-muted">Click to complete · right-click to remove</small>
+        </section>
+
+        <!-- Drag & drop (21) -->
+        <section class="p-card p-widget" data-project="21" data-name="Drag N Drop">
+          <h3>Board</h3>
+          <div class="p-dnd">
+            <div class="p-dnd__col" data-col="todo"><h4>To do</h4></div>
+            <div class="p-dnd__col" data-col="doing"><h4>Doing</h4></div>
+          </div>
+        </section>
+
+        <!-- Notes (33) -->
+        <section class="p-card p-widget" id="w-notes" data-project="33" data-name="Notes App">
+          <h3>Quick Note</h3>
+          <textarea class="p-note" placeholder="Jot something…"></textarea>
+          <small class="p-muted" id="p-note-status">Saved locally</small>
+        </section>
+
+        <!-- Hydration (15) -->
+        <section class="p-card p-widget" data-project="15" data-name="Drink Water">
+          <h3>Hydration</h3>
+          <div class="p-water__big" id="p-water-big">0%</div>
+          <div class="p-water__cups" id="p-water-cups"></div>
+        </section>
+
+        <!-- Clock + dark mode (19) -->
+        <section class="p-card p-widget" data-project="19" data-name="Theme Clock">
+          <h3>Now</h3>
+          <div class="p-clock" id="p-clock">00:00:00</div>
+          <div class="p-clock__date" id="p-clock-date"></div>
+          <button class="p-btn p-btn--ghost" data-theme-toggle>Toggle dark mode</button>
+        </section>
+
+        <!-- Team live filter (42) -->
+        <section class="p-card p-widget" data-project="42" data-name="Live User Filter">
+          <h3>Team</h3>
+          <input class="p-filter-input" placeholder="Filter teammates…" />
+          <ul class="p-filter-list"></ul>
+        </section>
+
+        <!-- Decide for me (12) -->
+        <section class="p-card p-widget" data-project="12" data-name="Random Choice Picker">
+          <h3>Decide for me</h3>
+          <textarea class="p-pick-input" placeholder="One option per line…">Ship it&#10;Sleep on it&#10;Ask the team</textarea>
+          <button class="p-btn p-pick-btn">Pick one</button>
+          <div class="p-pick-out"></div>
+        </section>
+
+        <!-- Discover feed / Movie App (17), with skeletons (24) -->
+        <section class="p-card p-widget p-widget--wide" id="w-discover" data-project="17" data-name="Movie App">
+          <h3>Discover</h3>
+          <div class="p-discover" data-project="24" data-name="Content Placeholder"></div>
+        </section>
+
+        <!-- Integrations / Pokedex (37) -->
+        <section class="p-card p-widget p-widget--wide" id="w-integrations" data-project="37" data-name="Pokedex">
+          <h3>Integrations</h3>
+          <div class="p-integrations"></div>
+        </section>
+
+        <!-- Inspiration gallery / Random Image Feed (48) -->
+        <section class="p-card p-widget p-widget--wide" data-project="48" data-name="Random Image Feed">
+          <h3>Inspiration</h3>
+          <div class="p-gallery"></div>
+        </section>
+
+        <!-- Whiteboard / Drawing (22) -->
+        <section class="p-card p-widget" id="w-tools" data-project="22" data-name="Drawing App">
+          <h3>Whiteboard</h3>
+          <canvas class="p-draw" width="320" height="200"></canvas>
+          <div class="p-draw__tools">
+            <input type="color" class="p-draw-color" value="#7b2ff7" />
+            <input type="range" class="p-draw-size" min="1" max="24" value="4" />
+            <button class="p-btn p-btn--ghost p-draw-clear">Clear</button>
+          </div>
+        </section>
+
+        <!-- Focus sounds (8) -->
+        <section class="p-card p-widget" data-project="8" data-name="Sound Board">
+          <h3>Focus sounds</h3>
+          <div class="p-sounds"></div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Mobile tab bar (38) -->
+    <nav class="p-tabbar" data-project="38" data-name="Mobile Tab Navigation">
+      <a href="#w-tasks"><span>◔</span>Tasks</a>
+      <a href="#w-discover"><span>▦</span>Discover</a>
+      <a href="#w-tools"><span>⚙</span>Tools</a>
+      <a href="index.html"><span>◑</span>Site</a>
+    </nav>
+  </div>
+
+  <!-- Keyboard shortcuts modal (10) -->
+  <div class="p-modal" id="p-shortcuts">
+    <div class="p-modal__box">
+      <button class="p-modal__close" aria-label="Close">✕</button>
+      <h3>Keyboard shortcuts</h3>
+      <p class="p-muted">Press any key to see its code (Event KeyCodes):</p>
+      <div class="p-keyout" id="p-keyout">—</div>
+      <ul class="p-shortlist">
+        <li><kbd>?</kbd> open this panel</li>
+        <li><kbd>T</kbd> jump to tasks</li>
+        <li><kbd>Esc</kbd> close</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="pulse.js"></script>
+  <script src="pulse-app.js"></script>
+</body>
+
+</html>
